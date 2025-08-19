@@ -16,19 +16,19 @@ const Hero = () => {
           <div className="flex lg:items-center lg:gap-8 xl:gap-32.5">
             <div className=" md:w-1/2">
               <h4 className="mb-4.5 text-lg font-medium text-black dark:text-white">
-                🔥 Solid - A Complete SaaS Web Template
+                🚀 You're one step away from
               </h4>
               <h1 className="mb-5 pr-16 text-3xl font-bold text-black dark:text-white xl:text-hero ">
-                Free Next.js Template for {"   "}
-                <span className="relative inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg dark:before:bg-titlebgdark ">
-                  SaaS
+                Maximize your online potential with our expert {"   "}
+                <span className="relative inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-gradient-to-r before:from-blue-400 before:to-purple-600 dark:before:from-blue-500 dark:before:to-purple-700">
+                  AI-driven
                 </span>
+                {" "}solutions
               </h1>
-              <p>
-                Solid Pro - Packed with all the key integrations you need for
-                swift SaaS startup launch, including - Auth, Database, Sanity
-                Blog, Essential Components, Pages and More. Built-winth -
-                Next.js 13, React 18 and TypeScript.
+              <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                SEO, lead-nurturing automation, AI-driven insights, and stunning website designs. 
+                Plus, stay in control on the go with our mobile app for seamless management of 
+                website leads and clients.
               </p>
 
               <div className="mt-10">
@@ -42,10 +42,10 @@ const Hero = () => {
                       className="rounded-full border border-stroke px-6 py-2.5 shadow-solid-2 focus:border-primary focus:outline-hidden dark:border-strokedark dark:bg-black dark:shadow-none dark:focus:border-primary"
                     />
                     <button
-                      aria-label="get started button"
-                      className="flex rounded-full bg-black px-7.5 py-2.5 text-white duration-300 ease-in-out hover:bg-blackho dark:bg-btndark dark:hover:bg-blackho"
+                      aria-label="get free quote button"
+                      className="flex rounded-full bg-gradient-to-r from-blue-600 to-purple-600 px-7.5 py-2.5 text-white duration-300 ease-in-out hover:from-blue-700 hover:to-purple-700 dark:from-blue-500 dark:to-purple-500 dark:hover:from-blue-600 dark:hover:to-purple-600"
                     >
-                      Get Started
+                      Get a Free Quote Today!
                     </button>
                   </div>
                 </form>

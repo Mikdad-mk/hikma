@@ -24,15 +24,15 @@ const SingleFeature = ({ feature }: { feature: Feature }) => {
         whileInView="visible"
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
-        className="animate_top z-40 rounded-lg border border-white bg-white p-7.5 shadow-solid-3 transition-all hover:shadow-solid-4 dark:border-strokedark dark:bg-blacksection dark:hover:bg-hoverdark xl:p-12.5"
+        className="animate_top z-40 rounded-xl border border-gray-200 bg-white p-7.5 shadow-solid-3 transition-all hover:shadow-solid-4 hover:scale-105 dark:border-strokedark dark:bg-blacksection dark:hover:bg-hoverdark xl:p-12.5 modern-card"
       >
-        <div className="relative flex h-16 w-16 items-center justify-center rounded-[4px] bg-primary">
-          <Image src={icon} width={36} height={36} alt="title" />
+        <div className="relative flex h-16 w-16 items-center justify-center rounded-xl bg-gradient-to-r from-blue-500 to-purple-600 shadow-lg ai-glow">
+          <Image src={icon} width={36} height={36} alt="title" className="filter brightness-0 invert" />
         </div>
-        <h3 className="mb-5 mt-7.5 text-xl font-semibold text-black dark:text-white xl:text-itemtitle">
+        <h3 className="mb-5 mt-7.5 text-xl font-semibold text-black dark:text-white xl:text-itemtitle gradient-animate">
           {title}
         </h3>
-        <p>{description}</p>
+        <p className="text-gray-600 dark:text-gray-300 leading-relaxed">{description}</p>
       </motion.div>
     </>
   );

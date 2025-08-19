@@ -9,7 +9,7 @@ const menuData: Menu[] = [
   },
   {
     id: 2,
-    title: "Features",
+    title: "Services",
     newTab: false,
     path: "/#features",
   },
@@ -21,38 +21,44 @@ const menuData: Menu[] = [
   },
   {
     id: 2.3,
-    title: "Docs",
+    title: "About",
     newTab: false,
-    path: "/docs",
+    path: "/#about",
   },
   {
     id: 3,
-    title: "Pages",
+    title: "More",
     newTab: false,
     submenu: [
       {
         id: 31,
-        title: "Blog Grid",
+        title: "SEO Services",
         newTab: false,
-        path: "/blog",
+        path: "/#features",
+      },
+      {
+        id: 32,
+        title: "Web Design",
+        newTab: false,
+        path: "/#features",
+      },
+      {
+        id: 33,
+        title: "AI Automation",
+        newTab: false,
+        path: "/#features",
       },
       {
         id: 34,
-        title: "Sign In",
+        title: "Contact",
         newTab: false,
-        path: "/auth/signin",
+        path: "/#contact",
       },
       {
         id: 35,
-        title: "Sign Up",
+        title: "Pricing",
         newTab: false,
-        path: "/auth/signup",
-      },
-      {
-        id: 35,
-        title: "Docs",
-        newTab: false,
-        path: "/docs",
+        path: "/#pricing",
       },
       {
         id: 35.1,
@@ -60,20 +66,14 @@ const menuData: Menu[] = [
         newTab: false,
         path: "/support",
       },
-      {
-        id: 36,
-        title: "404",
-        newTab: false,
-        path: "/error",
-      },
     ],
   },
 
   {
     id: 4,
-    title: "Support",
+    title: "Contact",
     newTab: false,
-    path: "/support",
+    path: "/#contact",
   },
 ];
 

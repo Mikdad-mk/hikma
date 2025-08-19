@@ -4,44 +4,44 @@ const featuresData: Feature[] = [
   {
     id: 1,
     icon: "/images/icon/icon-01.svg",
-    title: "Crafted for SaaS",
+    title: "SEO: Rank Higher, Get Found, Grow Faster",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.",
+      "Boost visibility with cutting-edge SEO strategies—optimize content, structure, and keywords to enhance search rankings and drive organic traffic.",
   },
   {
     id: 2,
     icon: "/images/icon/icon-02.svg",
-    title: "High-quality Design",
+    title: "Lead Capturing: Convert Visitors into Customers",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.",
+      "High-converting forms, chatbots, and landing pages capture visitor data. Automated follow-ups and CRM integrations ensure you never miss a lead.",
   },
   {
     id: 3,
     icon: "/images/icon/icon-03.svg",
-    title: "Next.js 13 + TypeScript",
+    title: "Automation and AI: Work Smarter, Not Harder",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.",
+      "Use advanced automation and AI tools, from chatbots to marketing solutions, to save time and increase efficiency across all your digital operations.",
   },
   {
     id: 4,
     icon: "/images/icon/icon-04.svg",
-    title: "Sanity Blog and Docs",
+    title: "Beautiful Web Design",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.",
+      "Modern, responsive website designs that convert visitors into customers. AI-powered design insights ensure your site performs at its best.",
   },
   {
     id: 5,
     icon: "/images/icon/icon-05.svg",
-    title: "DB, Auth and Stripe",
+    title: "Mobile App Management",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.",
+      "Stay in control on the go with our mobile app for seamless management of website leads and clients. Real-time insights and automation.",
   },
   {
     id: 6,
     icon: "/images/icon/icon-06.svg",
-    title: "Regular Free Updates",
+    title: "Social Media Marketing",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.",
+      "Strategic social media campaigns that build brand awareness, engage audiences, and drive conversions through AI-optimized content and targeting.",
   },
 ];
 

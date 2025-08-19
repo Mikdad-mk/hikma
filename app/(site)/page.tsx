@@ -14,10 +14,8 @@ import Blog from "@/components/Blog";
 import Testimonial from "@/components/Testimonial";
 
 export const metadata: Metadata = {
-  title: "Next.js Starter Template for SaaS Startups - Solid SaaS Boilerplate",
-
-  // other metadata
-  description: "This is Home for Solid Pro"
+  title: "Digital Marketing Services - SEO, AI Automation & Web Design",
+  description: "Maximize your online potential with our expert SEO, lead-nurturing automation, AI-driven insights, and stunning website designs. Get a free quote today!"
 };
 
 export default function Home() {
