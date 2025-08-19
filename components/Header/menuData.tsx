@@ -9,16 +9,11 @@ const menuData: Menu[] = [
   },
   {
     id: 2,
-    title: "Services",
+    title: "Features",
     newTab: false,
     path: "/#features",
   },
-  {
-    id: 2.1,
-    title: "Blog",
-    newTab: false,
-    path: "/blog",
-  },
+  // Removed Blog from top nav for single-page focus
   {
     id: 2.3,
     title: "About",
@@ -32,21 +27,21 @@ const menuData: Menu[] = [
     submenu: [
       {
         id: 31,
-        title: "SEO Services",
+        title: "SEO",
         newTab: false,
-        path: "/#features",
+        path: "/#seo",
       },
       {
         id: 32,
-        title: "Web Design",
+        title: "Smart Websites",
         newTab: false,
-        path: "/#features",
+        path: "/#smart",
       },
       {
         id: 33,
-        title: "AI Automation",
+        title: "Why Choose",
         newTab: false,
-        path: "/#features",
+        path: "/#why",
       },
       {
         id: 34,
@@ -56,22 +51,22 @@ const menuData: Menu[] = [
       },
       {
         id: 35,
-        title: "Pricing",
+        title: "Plans",
         newTab: false,
         path: "/#pricing",
       },
       {
         id: 35.1,
-        title: "Support",
+        title: "Book Appointment",
         newTab: false,
-        path: "/support",
+        path: "/#contact",
       },
     ],
   },
 
   {
     id: 4,
-    title: "Contact",
+    title: "Book Appointment",
     newTab: false,
     path: "/#contact",
   },

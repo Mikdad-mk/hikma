@@ -1,58 +1,28 @@
 "use client";
 import Image from "next/image";
-import { useState } from "react";
+import Link from "next/link";
 
 const Hero = () => {
-  const [email, setEmail] = useState("");
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
-
   return (
     <>
       <section className="min-h-screen overflow-hidden pb-20 pt-35 md:pt-40 xl:pb-25 xl:pt-46">
         <div className="mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0">
           <div className="flex lg:items-center lg:gap-8 xl:gap-32.5">
             <div className=" md:w-1/2">
-              <h4 className="mb-4.5 text-lg font-medium text-black dark:text-white">
-                🚀 You're one step away from
-              </h4>
-              <h1 className="mb-5 pr-16 text-3xl font-bold text-black dark:text-white xl:text-hero ">
-                Maximize your online potential with our expert {"   "}
-                <span className="relative inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-gradient-to-r before:from-blue-400 before:to-purple-600 dark:before:from-blue-500 dark:before:to-purple-700">
-                  AI-driven
-                </span>
-                {" "}solutions
+              <h1 className="mb-5 pr-0 text-3xl font-bold text-black dark:text-white xl:text-hero">
+                You\'re one step away from a stunning, mobile-friendly website.
               </h1>
-              <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                SEO, lead-nurturing automation, AI-driven insights, and stunning website designs. 
-                Plus, stay in control on the go with our mobile app for seamless management of 
-                website leads and clients.
+              <p className="text-lg leading-relaxed text-gray-600 dark:text-gray-300">
+                Maximize your online potential with our expert SEO, lead-nurturing automation, AI-driven insights, and stunning website designs. Plus, stay in control on the go with our mobile app.
               </p>
 
-              <div className="mt-10">
-                <form onSubmit={handleSubmit}>
-                  <div className="flex flex-wrap gap-5">
-                    <input
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      type="text"
-                      placeholder="Enter your email address"
-                      className="rounded-full border border-stroke px-6 py-2.5 shadow-solid-2 focus:border-primary focus:outline-hidden dark:border-strokedark dark:bg-black dark:shadow-none dark:focus:border-primary"
-                    />
-                    <button
-                      aria-label="get free quote button"
-                      className="flex rounded-full bg-gradient-to-r from-blue-600 to-purple-600 px-7.5 py-2.5 text-white duration-300 ease-in-out hover:from-blue-700 hover:to-purple-700 dark:from-blue-500 dark:to-purple-500 dark:hover:from-blue-600 dark:hover:to-purple-600"
-                    >
-                      Get a Free Quote Today!
-                    </button>
-                  </div>
-                </form>
-
-                <p className="mt-5 text-black dark:text-white">
-                  Try for free no credit card required.
-                </p>
+              <div className="mt-10 flex flex-wrap items-center gap-5">
+                <Link
+                  href="/#contact"
+                  className="rounded-full bg-gradient-to-r from-blue-600 to-purple-600 px-7.5 py-2.5 text-white shadow-solid-5 duration-300 ease-in-out hover:from-blue-700 hover:to-purple-700"
+                >
+                  Get a Free Quote Today!
+                </Link>
               </div>
             </div>
 

@@ -7,7 +7,7 @@ const About = () => {
   return (
     <>
       {/* <!-- ===== About Start ===== --> */}
-      <section className="overflow-hidden pb-20 lg:pb-25 xl:pb-30">
+      <section id="about" className="overflow-hidden pb-20 lg:pb-25 xl:pb-30">
         <div className="mx-auto max-w-c-1235 px-4 md:px-8 xl:px-0">
           <div className="flex items-center gap-8 lg:gap-32.5">
             <motion.div
@@ -59,21 +59,12 @@ const About = () => {
               viewport={{ once: true }}
               className="animate_right md:w-1/2"
             >
-              <span className="font-medium uppercase text-black dark:text-white">
-                <span className="mb-4 mr-4 inline-flex rounded-full bg-meta px-4.5 py-1 text-metatitle uppercase text-white ">
-                  New
-                </span>{" "}
-                SaaS Boilerplate for Next.js
-              </span>
+              <span className="font-medium uppercase text-black dark:text-white">Who We Are</span>
               <h2 className="relative mb-6 text-3xl font-bold text-black dark:text-white xl:text-hero">
-                A Complete Solution for
-                <span className="relative inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg dark:before:bg-titlebgdark">
-                  SaaS Startup
-                </span>
+                A results-driven team focused on your growth
               </h2>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-                ultricies lacus non fermentum ultrices. Fusce consectetur le.
+                We build conversion-focused, mobile-friendly websites powered by SEO, automation, and AI. Our mission is to help businesses attract more customers, close more deals, and grow faster—while keeping everything simple to manage.
               </p>
 
               <div className="mt-7.5 flex items-center gap-5">
@@ -83,10 +74,8 @@ const About = () => {
                   </p>
                 </div>
                 <div className="w-3/4">
-                  <h3 className="mb-0.5 text-metatitle2 text-black dark:text-white">
-                    React 18, Next.js 13 and TypeScript
-                  </h3>
-                  <p>Ut ultricies lacus non fermentum ultrices.</p>
+                  <h3 className="mb-0.5 text-metatitle2 text-black dark:text-white">Expert SEO and Fast Performance</h3>
+                  <p>Built for speed and discoverability to maximize visibility and conversions.</p>
                 </div>
               </div>
               <div className="mt-7.5 flex items-center gap-5">
@@ -96,10 +85,8 @@ const About = () => {
                   </p>
                 </div>
                 <div className="w-3/4">
-                  <h3 className="mb-0.5 text-metatitle2 text-black dark:text-white">
-                    Fully Customizable
-                  </h3>
-                  <p>consectetur adipiscing elit fermentum ultricies.</p>
+                  <h3 className="mb-0.5 text-metatitle2 text-black dark:text-white">Automation & AI Built In</h3>
+                  <p>Automations that nurture leads and streamline your operations.</p>
                 </div>
               </div>
             </motion.div>
@@ -130,26 +117,16 @@ const About = () => {
               viewport={{ once: true }}
               className="animate_left md:w-1/2"
             >
-              <h4 className="font-medium uppercase text-black dark:text-white">
-                Launch Your SaaS Fast
-              </h4>
-              <h2 className="relative mb-6 text-3xl font-bold text-black dark:text-white xl:text-hero">
-                Packed with All Essential {"   "}
-                <span className="relative inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg2 dark:before:bg-titlebgdark">
-                  Integrations
-                </span>
-              </h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-                ultricies lacus non fermentum ultrices. Fusce consectetur le.
-              </p>
+              <h4 className="font-medium uppercase text-black dark:text-white">Our Approach</h4>
+              <h2 className="relative mb-6 text-3xl font-bold text-black dark:text-white xl:text-hero">Strategy → Design → Build → Optimize</h2>
+              <p>We partner closely to understand your goals, design for outcomes, build fast, and continually optimize using data and AI insights.</p>
               <div>
                 <a
-                  href="#"
+                  href="/#about"
                   className="group mt-7.5 inline-flex items-center gap-2.5 text-black hover:text-primary dark:text-white dark:hover:text-primary"
                 >
                   <span className="duration-300 group-hover:pr-2">
-                    Know More
+                    More About Us
                   </span>
                   <svg
                     width="14"

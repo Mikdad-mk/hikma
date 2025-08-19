@@ -46,18 +46,11 @@ const Footer = () => {
                 </a>
 
                 <p className="mb-10 mt-5">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Smart, mobile-friendly websites with SEO, automation, and AI to grow your business.
                 </p>
 
-                <p className="mb-1.5 text-sectiontitle uppercase tracking-[5px]">
-                  contact
-                </p>
-                <a
-                  href="#"
-                  className="text-itemtitle font-medium text-black dark:text-white"
-                >
-                  hello@solid.com
-                </a>
+                <p className="mb-1.5 text-sectiontitle uppercase tracking-[5px]">contact</p>
+                <a href="mailto:jasper@webjuice.io" className="text-itemtitle font-medium text-black dark:text-white">jasper@webjuice.io</a>
               </motion.div>
 
               <div className="flex w-full flex-col gap-8 md:flex-row md:justify-between md:gap-0 lg:w-2/3 xl:w-7/12">
@@ -84,38 +77,10 @@ const Footer = () => {
                   </h4>
 
                   <ul>
-                    <li>
-                      <a
-                        href="#"
-                        className="mb-3 inline-block hover:text-primary"
-                      >
-                        Home
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className="mb-3 inline-block hover:text-primary"
-                      >
-                        Product
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className="mb-3 inline-block hover:text-primary"
-                      >
-                        Careers
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className="mb-3 inline-block hover:text-primary"
-                      >
-                        Pricing
-                      </a>
-                    </li>
+                    <li><a href="/#" className="mb-3 inline-block hover:text-primary">Home</a></li>
+                    <li><a href="/#about" className="mb-3 inline-block hover:text-primary">About Us</a></li>
+                    <li><a href="/#pricing" className="mb-3 inline-block hover:text-primary">Plans</a></li>
+                    <li><a href="/#contact" className="mb-3 inline-block hover:text-primary">Book Appointment</a></li>
                   </ul>
                 </motion.div>
 
@@ -195,12 +160,8 @@ const Footer = () => {
                   viewport={{ once: true }}
                   className="animate_top"
                 >
-                  <h4 className="mb-9 text-itemtitle2 font-medium text-black dark:text-white">
-                    Newsletter
-                  </h4>
-                  <p className="mb-4 w-[90%]">
-                    Subscribe to receive future updates
-                  </p>
+                  <h4 className="mb-9 text-itemtitle2 font-medium text-black dark:text-white">Newsletter</h4>
+                  <p className="mb-4 w-[90%]">Subscribe to receive updates</p>
 
                   <form action="#">
                     <div className="relative">
@@ -264,21 +225,11 @@ const Footer = () => {
               className="animate_top"
             >
               <ul className="flex items-center gap-8">
-                <li>
-                  <a href="#" className="hover:text-primary">
-                    English
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-primary">
-                    Privacy Policy
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-primary">
-                    Support
-                  </a>
-                </li>
+                <li><a href="/#" className="hover:text-primary">Home</a></li>
+                <li><a href="/#about" className="hover:text-primary">About Us</a></li>
+                <li><a href="/#pricing" className="hover:text-primary">Plans</a></li>
+                <li><a href="/#contact" className="hover:text-primary">Contact Us</a></li>
+                <li><a href="/#contact" className="hover:text-primary">Book Appointment</a></li>
               </ul>
             </motion.div>
 
@@ -300,9 +251,7 @@ const Footer = () => {
               viewport={{ once: true }}
               className="animate_top"
             >
-              <p>
-                &copy; {new Date().getFullYear()} Solid. All rights reserved
-              </p>
+              <p>&copy; {new Date().getFullYear()} DIGITAL HIKMA. All rights reserved.</p>
             </motion.div>
 
             <motion.div
