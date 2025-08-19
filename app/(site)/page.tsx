@@ -14,7 +14,7 @@ import Blog from "@/components/Blog";
 import Testimonial from "@/components/Testimonial";
 
 export const metadata: Metadata = {
-  title: "Digital Marketing Services - SEO, AI Automation & Web Design",
+  title: "DIGITAL HIKMA - SEO, AI Automation & Web Design",
   description: "Maximize your online potential with our expert SEO, lead-nurturing automation, AI-driven insights, and stunning website designs. Get a free quote today!"
 };
 
