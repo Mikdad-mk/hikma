@@ -150,7 +150,14 @@
 @layer utilities {
   @media (max-width: 1280px) {
     .navbar {
-      @apply max-h-[400px] overflow-y-scroll;
+      @apply max-h-[75vh] overflow-y-auto no-scrollbar;
+    }
+  }
+
+  /* Mobile nav overlay spacing to avoid header overlap */
+  @media (max-width: 1279px) {
+    .nav-overlay {
+      @apply mt-3;
     }
   }
   

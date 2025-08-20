@@ -2,6 +2,8 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
+import toast from "react-hot-toast";
+import { track } from "@vercel/analytics";
 
 const Contact = () => {
   /**
@@ -12,8 +14,54 @@ const Contact = () => {
   React.useEffect(() => {
     setHasMounted(true);
   }, []);
+  const [submitting, setSubmitting] = React.useState(false);
+
+  const formRef = React.useRef<HTMLFormElement | null>(null);
+
   if (!hasMounted) {
     return null;
+  }
+
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    if (!formRef.current) return;
+    const formData = new FormData(formRef.current);
+    const payload = {
+      name: String(formData.get("name") || "").trim(),
+      email: String(formData.get("email") || "").trim(),
+      subject: String(formData.get("subject") || "").trim(),
+      phone: String(formData.get("phone") || "").trim(),
+      message: String(formData.get("message") || "").trim(),
+    };
+
+    if (!payload.name || !payload.email) {
+      toast.error("Please provide your name and email.");
+      return;
+    }
+
+    try {
+      setSubmitting(true);
+      const res = await fetch("/api/appointments", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        throw new Error(data?.error || "Failed to submit appointment");
+      }
+      track("appointment_submitted", {
+        subject: payload.subject || null,
+        hasPhone: Boolean(payload.phone),
+        messageLength: payload.message?.length || 0,
+      });
+      toast.success("Appointment request submitted!");
+      formRef.current.reset();
+    } catch (err: any) {
+      toast.error(err?.message || "Something went wrong.");
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   return (
@@ -59,20 +107,19 @@ const Contact = () => {
               <h2 className="mb-3 text-3xl font-semibold text-black dark:text-white xl:text-sectiontitle2">Ready to begin?</h2>
               <p className="mb-10 max-w-2xl">Book a quick call and get a fast, no-obligation quote. We\'ll review your goals and show you how a Smart Website can help you grow.</p>
 
-              <form
-                action="https://formbold.com/s/unique_form_id"
-                method="POST"
-              >
+              <form ref={formRef} onSubmit={handleSubmit}>
                 <div className="mb-7.5 flex flex-col gap-7.5 lg:flex-row lg:justify-between lg:gap-14">
                   <input
                     type="text"
                     placeholder="Full name"
+                    name="name"
                     className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-hidden dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
                   />
 
                   <input
                     type="email"
                     placeholder="Email address"
+                    name="email"
                     className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-hidden dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
                   />
                 </div>
@@ -81,12 +128,14 @@ const Contact = () => {
                   <input
                     type="text"
                     placeholder="Subject"
+                    name="subject"
                     className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-hidden dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
                   />
 
                   <input
                     type="text"
                     placeholder="Phone number"
+                    name="phone"
                     className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-hidden dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
                   />
                 </div>
@@ -95,6 +144,7 @@ const Contact = () => {
                   <textarea
                     placeholder="Message"
                     rows={4}
+                    name="message"
                     className="w-full border-b border-stroke bg-transparent focus:border-waterloo focus:placeholder:text-black focus-visible:outline-hidden dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white"
                   ></textarea>
                 </div>
@@ -132,7 +182,9 @@ const Contact = () => {
                     </label>
                   </div>
 
-                  <a href="mailto:jasper@webjuice.io?subject=Book%20Appointment" className="inline-flex items-center gap-2.5 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 px-6 py-3 font-medium text-white duration-300 ease-in-out hover:from-blue-700 hover:to-purple-700">Book Appointment</a>
+                  <button type="submit" disabled={submitting} className="inline-flex items-center gap-2.5 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 px-6 py-3 font-medium text-white duration-300 ease-in-out hover:from-blue-700 hover:to-purple-700 disabled:opacity-60 disabled:cursor-not-allowed">
+                    {submitting ? "Submitting..." : "Book Appointment"}
+                  </button>
                 </div>
               </form>
             </motion.div>

@@ -26,7 +26,7 @@ const Smart = () => {
           {items.map((item, idx) => (
             <div key={idx} className="rounded-lg bg-white p-7.5 shadow-solid-8 dark:border dark:border-strokedark dark:bg-blacksection">
               <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-full bg-zumthor dark:bg-black">
-                <Image src={item.icon} alt={item.title} width={24} height={24} />
+                <Image src={item.icon} alt={item.title} width={24} height={24} className="dark:img-white" />
               </div>
               <h3 className="mb-2 text-itemtitle2 font-semibold text-black dark:text-white">{item.title}</h3>
               <p className="text-waterloo dark:text-manatee">{item.desc}</p>

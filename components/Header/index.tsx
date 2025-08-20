@@ -27,6 +27,12 @@ const Header = () => {
     window.addEventListener("scroll", handleStickyMenu);
   });
 
+  // Close mobile navigation and dropdown on route change
+  useEffect(() => {
+    setNavigationOpen(false);
+    setDropdownToggler(false);
+  }, [pathUrl]);
+
   return (
     <header
       className={`fixed left-0 top-0 z-99999 w-full py-7 ${
@@ -97,9 +103,10 @@ const Header = () => {
 
         {/* Nav Menu Start   */}
         <div
-          className={`invisible h-0 w-full items-center justify-between xl:visible xl:flex xl:h-auto xl:w-full ${
-            navigationOpen &&
-            "navbar visible! mt-4 h-auto max-h-[400px] rounded-md bg-white p-7.5 shadow-solid-5 dark:bg-blacksection xl:h-auto xl:p-0 xl:shadow-none xl:dark:bg-transparent"
+          className={`w-full items-center justify-between xl:visible xl:flex xl:h-auto xl:w-full ${
+            navigationOpen
+              ? "navbar visible! absolute left-0 right-0 top-full z-999 mt-3 max-h-[75vh] overflow-y-auto rounded-md bg-white p-6 shadow-solid-5 dark:bg-blacksection xl:static xl:mt-0 xl:max-h-none xl:overflow-visible xl:rounded-none xl:bg-transparent xl:p-0 xl:shadow-none"
+              : "invisible h-0 xl:visible xl:h-auto"
           }`}
         >
           <nav>
@@ -125,7 +132,7 @@ const Header = () => {
                       </button>
 
                       <ul
-                        className={`dropdown ${dropdownToggler ? "flex" : ""}`}
+                        className={`dropdown ${dropdownToggler ? "flex" : ""} w-full min-w-0 xl:min-w-[250px]`}
                       >
                         {menuItem.submenu.map((item, key) => (
                           <li key={key} className="hover:text-primary">
@@ -151,7 +158,7 @@ const Header = () => {
             </ul>
           </nav>
 
-          <div className="mt-7 flex items-center gap-6 xl:mt-0">
+          <div className="mt-7 flex flex-col items-start gap-4 xl:mt-0 xl:flex-row xl:items-center xl:gap-6">
             <ThemeToggler />
 
             <Link
