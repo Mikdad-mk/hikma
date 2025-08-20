@@ -56,10 +56,10 @@ const Footer = () => {
                     Contact
                   </p>
                   <a 
-                    href="mailto:jasper@webjuice.io" 
+                    href="mailto:digitalhikma.com" 
                     className="block text-sm sm:text-base font-medium text-black dark:text-white hover:text-primary transition-colors duration-300"
                   >
-                    jasper@webjuice.io
+                    digitalhikma.com
                   </a>
                 </div>
               </motion.div>
