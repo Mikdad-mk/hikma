@@ -159,11 +159,11 @@ const Contact = () => {
 
               <div className="5 mb-7">
                 <h3 className="mb-4 text-metatitle3 font-medium text-black dark:text-white">Email</h3>
-                <p><a href="mailto:jasper@webjuice.io">jasper@webjuice.io</a></p>
+                <p><a href="mailto:digitalhikma.com">digitalhikma.com</a></p>
               </div>
               <div className="5 mb-7">
                 <h3 className="mb-4 text-metatitle3 font-medium text-black dark:text-white">Phone</h3>
-                <p><a href="tel:+18581234567">(858) 123-4567</a></p>
+                <p><a href="tel:+13322595013">+13322595013</a></p>
               </div>
             </motion.div>
           </div>
