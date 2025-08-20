@@ -57,18 +57,18 @@ const menuData: Menu[] = [
       },
       {
         id: 35.1,
-        title: "Book Appointment",
+        title: "project",
         newTab: false,
-        path: "/#contact",
+        path: "/blog",
       },
     ],
   },
 
   {
     id: 4,
-    title: "Book Appointment",
+    title: "projects",
     newTab: false,
-    path: "/#contact",
+    path: "/blog",
   },
 ];
 
