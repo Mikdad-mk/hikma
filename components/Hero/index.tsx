@@ -64,7 +64,8 @@ const Hero = () => {
                   href="/#contact"
                   className="group relative px-6 py-3 sm:px-8 sm:py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 ease-out overflow-hidden text-sm sm:text-base"
                 >
-                  <span className="relative z-10">Get a Free Quote Today!</span>
+                  <span className="relative z-10">Book Appointement
+                  </span>
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-700 to-purple-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </Link>
                 
