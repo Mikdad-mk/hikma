@@ -39,7 +39,7 @@ const Hero = () => {
               </div>
 
               {/* Enhanced Main Heading */}
-              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold leading-tight animate-fade-in-up-delayed">
+              <h1 className="text-2xl sm:text-3xl md:text-3xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold leading-tight animate-fade-in-up-delayed">
                 <span className="text-black dark:text-white">
                   You're one step away from a
                 </span>

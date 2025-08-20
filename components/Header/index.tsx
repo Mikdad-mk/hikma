@@ -165,7 +165,7 @@ const Header = () => {
               href="/#contact"
               className="flex items-center justify-center rounded-full bg-gradient-to-r from-blue-600 to-purple-600 px-7.5 py-2.5 text-regular text-white duration-300 ease-in-out hover:from-blue-700 hover:to-purple-700"
             >
-              Get Free Quote 🚀
+              Book Appointement 🚀
             </Link>
           </div>
         </div>
